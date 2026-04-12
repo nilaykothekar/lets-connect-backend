@@ -1,0 +1,2 @@
+- Installed Express.js to create a server that listens on port 3000.
+- Installed Nodemon to restart and rerun the server everytime there is a change in the application.

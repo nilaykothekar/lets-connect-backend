@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is a social media app for connecting with new people",
+  "keywords": [
+    "nodejs",
+    "backend",
+    "microservice",
+    "mongodb",
+    "expressjs",
+    "database",
+    "javascript"
+  ],
+  "license": "ISC",
+  "author": "Nilay Kothekar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
