@@ -6,3 +6,4 @@
 - Connected to the database cluster using a connection string.
 - Imported express.json() to get the incoming request in JS object format.
 - express.json() converts request from JSON to object format inside req.body.
+- Created a GET API by model.find({}) to get all users in feed API.

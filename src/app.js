@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.json());
 
+// Sign Up API
 app.post("/signup", async (req, res) => {
     const user = new User(req.body);
 
@@ -18,6 +19,17 @@ app.post("/signup", async (req, res) => {
     }
 });
 
+// Feed API
+app.get("/feed", async (req, res) => {
+    try {
+        const users = await User.find({});
+        res.send(users);
+    } catch (error) {
+        res.status(400).send("Bad Request");
+    }
+});
+
+// Database connection and server start
 connectDB().then(() => {
     console.log("Connected to the database");
     app.listen(3000, () => {
