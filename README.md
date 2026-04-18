@@ -1,2 +1,6 @@
 - Installed Express.js to create a server that listens on port 3000.
 - Installed Nodemon to restart and rerun the server everytime there is a change in the application.
+- Installed Postman to test the APIs.
+- Installed Mongoose to connect application to the database.
+- Installed MongoDB Atlas and MongoDB Compass as a tool for accessing and viewing the database.
+- Connected to the database cluster using a connection string.
