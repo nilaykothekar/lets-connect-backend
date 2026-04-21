@@ -9,3 +9,4 @@
 - Created a GET API by model.find({}) to get all users in feed API for /feed route.
 - Created a POST API to for signing up of a user using user.save() for /signup route.
 - Created a DELETE API to delete a user using user.findByIdAndDelete() for /user route.
+- Created a PATCH API to update a user using user.findByIdAndUpdate() for /user route.

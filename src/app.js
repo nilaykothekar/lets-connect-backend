@@ -43,6 +43,23 @@ app.delete("/user", async (req, res) => {
     }
 });
 
+// Update the data of user 
+app.patch("/user", async (req, res) => {
+    const { userId, ...updateData } = req.body;
+
+    try {
+        const user = await User.findByIdAndUpdate(userId, updateData, { returnDocument: "after" });
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.json(user); // return updated user
+    } catch (error) {
+        console.error(error);
+        res.status(400).send("Bad Request");
+    }
+});
+
+
 // Database connection and server start
 connectDB().then(() => {
     console.log("Connected to the database");
