@@ -29,6 +29,20 @@ app.get("/feed", async (req, res) => {
     }
 });
 
+// Delete User API
+app.delete("/user", async (req, res) => {
+    const userId = req.body.userId;
+    try {
+        const user = await User.findByIdAndDelete(userId);
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.send("User deleted successfully");
+    } catch (error) {
+        res.status(400).send("Bad Request");
+    }
+});
+
 // Database connection and server start
 connectDB().then(() => {
     console.log("Connected to the database");

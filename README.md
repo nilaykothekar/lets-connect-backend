@@ -6,4 +6,6 @@
 - Connected to the database cluster using a connection string.
 - Imported express.json() to get the incoming request in JS object format.
 - express.json() converts request from JSON to object format inside req.body.
-- Created a GET API by model.find({}) to get all users in feed API.
+- Created a GET API by model.find({}) to get all users in feed API for /feed route.
+- Created a POST API to for signing up of a user using user.save() for /signup route.
+- Created a DELETE API to delete a user using user.findByIdAndDelete() for /user route.
