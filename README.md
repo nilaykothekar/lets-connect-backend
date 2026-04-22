@@ -10,3 +10,6 @@
 - Created a POST API to for signing up of a user using user.save() for /signup route.
 - Created a DELETE API to delete a user using user.findByIdAndDelete() for /user route.
 - Created a PATCH API to update a user using user.findByIdAndUpdate() for /user route.
+- Added validation in schema type using a custome validator function.
+- Sanitized data using schema type options like min, max, minLength, maxLength, unique, lowercase, trim, etc. checkpoints.
+- Added timestamps to the schema.

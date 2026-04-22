@@ -15,7 +15,7 @@ app.post("/signup", async (req, res) => {
         res.send("User added successfully");
     } catch (error) {
         console.error("Error adding user:", error);
-        return res.status(400).send("Bad Request");
+        return res.status(400).send("Bad Request" + error.message);
     }
 });
 
@@ -25,7 +25,7 @@ app.get("/feed", async (req, res) => {
         const users = await User.find({});
         res.send(users);
     } catch (error) {
-        res.status(400).send("Bad Request");
+        res.status(400).send("Bad Request" + error.message);
     }
 });
 
@@ -48,7 +48,7 @@ app.patch("/user", async (req, res) => {
     const { userId, ...updateData } = req.body;
 
     try {
-        const user = await User.findByIdAndUpdate(userId, updateData, { returnDocument: "after" });
+        const user = await User.findByIdAndUpdate(userId, updateData, { returnDocument: "after", runValidators: true });
         if (!user) {
             return res.status(404).send("User not found");
         }
